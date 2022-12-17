@@ -1,0 +1,143 @@
+0[0]: Alligator
+1[0]: Alligator
+--------------------
+2[1]: Bat
+3[1]: Bear
+4[1]: Beaver
+5[1]: Blue whale
+6[1]: Boar
+7[1]: Buffalo
+8[1]: Bull
+9[1]: Bat
+10[1]: Bear
+11[1]: Beaver
+12[1]: Blue whale
+13[1]: Boar
+14[1]: Buffalo
+--------------------
+15[2]: Calf
+16[2]: Camel
+17[2]: Carp
+18[2]: Cat
+19[2]: Caterpillar
+20[2]: Chameleon
+21[2]: Chick
+22[2]: Chimpanzee
+23[2]: Chipmunk
+24[2]: Clam
+25[2]: Cobra
+26[2]: Cockroach
+27[2]: Cod
+28[2]: Cow
+29[2]: Coyote
+30[2]: Crab
+31[2]: Crocodile
+--------------------
+32[3]: Dinosaurs
+33[3]: Dog
+34[3]: Donkey
+35[3]: Dove
+36[3]: Dragon
+37[3]: Duck
+--------------------
+38[4]: Eagle
+39[4]: Eel
+40[4]: Elephant
+--------------------
+41[5]: Falcon
+42[5]: Feather
+43[5]: Fox
+44[5]: Frog
+--------------------
+45[6]: Giraffe
+46[6]: Goldfish
+47[6]: Grasshopper
+--------------------
+48[7]: Hare
+49[7]: Hedgehog
+50[7]: Heron
+51[7]: Herring
+52[7]: Hippopotamus
+53[7]: Honeycomb
+--------------------
+--------------------
+54[9]: Jaguar
+55[9]: Jellyfish
+56[9]: Jellyfish
+--------------------
+57[10]: Kangaroo
+58[10]: Koala bear
+--------------------
+59[11]: Ladybug
+60[11]: Lion
+61[11]: Lizard
+62[11]: Lobster
+--------------------
+63[12]: Mammoth
+64[12]: Mink
+65[12]: Minnow
+66[12]: Mosquito
+--------------------
+67[13]: Nest
+--------------------
+68[14]: Octopus
+69[14]: Orca
+70[14]: Ostrich
+71[14]: Owl
+--------------------
+72[15]: Panda
+73[15]: Parasites
+74[15]: Parrot
+75[15]: Peacock
+76[15]: Penguin
+77[15]: Perch
+78[15]: Piglet
+79[15]: Plaice
+80[15]: Polar bear
+81[15]: Porcupine
+82[15]: Porcupine
+83[15]: Praying mantis
+84[15]: Puma
+--------------------
+--------------------
+85[17]: Raccoon
+86[17]: Rhinoceros
+--------------------
+87[18]: Salmon
+88[18]: Sardine
+89[18]: Sawfish
+90[18]: Scallop
+91[18]: Seagull
+92[18]: Seahorse
+93[18]: Seal
+94[18]: Shark
+95[18]: Shellfish
+96[18]: Slug
+97[18]: Snail
+98[18]: Sparrow
+99[18]: Squid
+100[18]: Squirrel
+101[18]: Squirrel
+102[18]: Starfish
+103[18]: Stingray
+104[18]: Swan
+105[18]: Swordfish
+--------------------
+106[19]: Talon
+107[19]: Tarantula
+108[19]: Tarantulatə
+109[19]: Toad
+110[19]: Turkey
+111[19]: Turtle
+112[19]: Turtle
+--------------------
+--------------------
+--------------------
+113[22]: White mouse
+114[22]: Wolf
+115[22]: Woodpecker
+--------------------
+--------------------
+--------------------
+116[25]: Zebra
+--------------------
