@@ -2,23 +2,23 @@
 using namespace std;
 
 
-struct BSTNODE {
+struct BSTNode {
 	int key;
-	BSTNODE* pLeft;
-	BSTNODE* pRight;
+	BSTNode* pLeft;
+	BSTNode* pRight;
 };
 
 //1. Initialize a NODE from a given value:
-BSTNODE* createNode(int data)
+BSTNode* createNode(int data)
 {
-	BSTNODE* newNode = new BSTNODE;
+	BSTNode* newNode = new BSTNode;
 	newNode->key = data;
 	newNode->pLeft = newNode->pRight = NULL;
 	return newNode;
 }
 
 //2. Add a NODE with given value into a given Binary Search Tree:
-void Insert(BSTNODE*& proot, int x)
+void Insert(BSTNode*& proot, int x)
 {
 	if (proot == NULL)
 	{
@@ -31,7 +31,7 @@ void Insert(BSTNODE*& proot, int x)
 }
 
 //3. Pre-order Traversal:
-void NLR(BSTNODE* pRoot)
+void NLR(BSTNode* pRoot)
 {
 	if (pRoot == NULL) return;
 	cout << pRoot->key << ' ';
@@ -40,7 +40,7 @@ void NLR(BSTNODE* pRoot)
 }
 
 //4. In-order Traversal:
-void LNR(BSTNODE* pRoot)
+void LNR(BSTNode* pRoot)
 {
 	if (pRoot == NULL) return;
 	LNR(pRoot->pLeft);
@@ -49,7 +49,7 @@ void LNR(BSTNODE* pRoot)
 }
 
 //5. Post - order Traversal :
-void LRN(BSTNODE* pRoot)
+void LRN(BSTNode* pRoot)
 {
 	if (pRoot == NULL) return;
 	LRN(pRoot->pLeft);
@@ -58,10 +58,10 @@ void LRN(BSTNODE* pRoot)
 }
 
 
-int Height(BSTNODE* proot);
-void print_i_level(BSTNODE* proot, int i);
+int Height(BSTNode* proot);
+void print_i_level(BSTNode* proot, int i);
 //6. Level - order Traversal :
-void LevelOrder(BSTNODE* pRoot)
+void LevelOrder(BSTNode* pRoot)
 {
 	int h = Height(pRoot);
 	for (int i = 0; i <= h; i++)
@@ -71,28 +71,28 @@ void LevelOrder(BSTNODE* pRoot)
 }
 
 //7. Calculate the height of a given Binary Tree;
-int Height(BSTNODE* proot)
+int Height(BSTNode* proot)
 {
 	if (proot == NULL) return 0;
 	return 1 + max(Height(proot->pLeft), Height(proot->pRight));
 }
 
 //8. Count the number of NODE from a given Binary Tree :
-int countNode(BSTNODE* pRoot)
+int countNode(BSTNode* pRoot)
 {
 	if (pRoot == NULL) return 0;
 	return 1 + countNode(pRoot->pLeft) + countNode(pRoot->pRight);
 }
 
 //9. Calculate the total value of all NODEs from a given Binary Tree :
-int sumNode(BSTNODE* pRoot)
+int sumNode(BSTNode* pRoot)
 {
 	if (pRoot == NULL) return 0;
 	return pRoot->key + sumNode(pRoot->pLeft) + sumNode(pRoot->pRight);
 }
 
 //10. Find and return a NODE with given value from a given Binary Search Tree :
-BSTNODE* Search(BSTNODE* pRoot, int x)
+BSTNode* Search(BSTNode* pRoot, int x)
 {
 	if (pRoot == NULL) 
 		return NULL;
@@ -105,9 +105,9 @@ BSTNODE* Search(BSTNODE* pRoot, int x)
 }
 
 
-int getMax(BSTNODE* pRoot);
+int getMax(BSTNode* pRoot);
 //11. Remove a NODE with given value from a given Binary Search Tree :
-void Remove(BSTNODE*& pRoot, int x)
+void Remove(BSTNode*& pRoot, int x)
 {
 	if (pRoot == NULL)
 		return;
@@ -124,7 +124,7 @@ void Remove(BSTNODE*& pRoot, int x)
 		return;
 	}
 
-	BSTNODE* temp = pRoot;
+	BSTNode* temp = pRoot;
 	if (pRoot->pLeft == NULL)
 	{
 		pRoot = pRoot->pRight;
@@ -146,16 +146,16 @@ void Remove(BSTNODE*& pRoot, int x)
 }
 
 //12. Initialize a Binary Search Tree from a given array :
-BSTNODE* createTree(int a[], int n)
+BSTNode* createTree(int a[], int n)
 {
-	BSTNODE* New_tree = NULL;
+	BSTNode* New_tree = NULL;
 	for (int i = 0; i < n; i++)
 		Insert(New_tree, a[i]);
 	return New_tree;
 }
 
 //13. Completely remove a given Binary Search Tree :
-void removeTree(BSTNODE*& pRoot)
+void removeTree(BSTNode*& pRoot)
 {
 	if (pRoot == NULL)
 		return;
@@ -165,7 +165,7 @@ void removeTree(BSTNODE*& pRoot)
 }
 
 //14. Calculate the height of a NODE with given value : (return -1 if value not exist)
-int heightNode(BSTNODE* pRoot, int value)
+int heightNode(BSTNode* pRoot, int value)
 {
 	if (pRoot == NULL)
 		return -1;
@@ -179,7 +179,7 @@ int heightNode(BSTNODE* pRoot, int value)
 }
 
 //15. * Calculate the level of a given NODE :
-int Level(BSTNODE* pRoot, BSTNODE* p)
+int Level(BSTNode* pRoot, BSTNode* p)
 {
 	if (pRoot == NULL)
 		return -1;
@@ -195,7 +195,7 @@ int Level(BSTNODE* pRoot, BSTNODE* p)
 }
 
 //16. * Count the number leaves from a given Binary Tree :
-int countLeaf(BSTNODE* pRoot)
+int countLeaf(BSTNode* pRoot)
 {
 	if (pRoot == NULL)
 		return 0;
@@ -208,7 +208,7 @@ int countLeaf(BSTNODE* pRoot)
 }
 
 //17. * Count the number of NODE from a given Binary Search Tree which key value is less than a given value :
-int countLess(BSTNODE* pRoot, int x)
+int countLess(BSTNode* pRoot, int x)
 {
 	if (pRoot == NULL)
 		return 0;
@@ -216,7 +216,7 @@ int countLess(BSTNODE* pRoot, int x)
 }
 
 //18. * Count the number of NODE from a given Binary Search Tree which key value is greater than a given value :
-int countGreater(BSTNODE* pRoot, int x)
+int countGreater(BSTNode* pRoot, int x)
 {
 	if (pRoot == NULL)
 		return 0;
@@ -230,9 +230,9 @@ int countGreater(BSTNODE* pRoot, int x)
 
 
 //19. * Determine if a given Binary Tree is Binary Search Tree :
-int max_value(BSTNODE* pRoot);
-int min_value(BSTNODE* pRoot);
-bool isBST(BSTNODE* pRoot)
+int max_value(BSTNode* pRoot);
+int min_value(BSTNode* pRoot);
+bool isBST(BSTNode* pRoot)
 {
 	if (pRoot == NULL)
 		return 1;
@@ -245,7 +245,7 @@ bool isBST(BSTNODE* pRoot)
 }
 
 //20. * Determine if a given Binary Tree is a Full Binary Search Tree :
-bool isFullBST(BSTNODE* pRoot)
+bool isFullBST(BSTNode* pRoot)
 {
 	if (pRoot == NULL)
 		return 1;
@@ -257,7 +257,7 @@ bool isFullBST(BSTNODE* pRoot)
 		return 1;
 }
 
-void print_i_level(BSTNODE* proot, int i)
+void print_i_level(BSTNode* proot, int i)
 {
 	if (proot == NULL) return;
 	if (i == 1)
@@ -269,14 +269,14 @@ void print_i_level(BSTNODE* proot, int i)
 	}
 }
 
-int getMax(BSTNODE* pRoot)
+int getMax(BSTNode* pRoot)
 {
 	if (pRoot->pRight == NULL)
 		return pRoot->key;
 	return getMax(pRoot->pRight);
 }
 
-int max_value(BSTNODE* pRoot)
+int max_value(BSTNode* pRoot)
 {
 	if (pRoot == NULL)
 		return INT_MIN;
@@ -287,7 +287,7 @@ int max_value(BSTNODE* pRoot)
 	return max(val, max(L_max, R_max));
 }
 
-int min_value(BSTNODE* pRoot)
+int min_value(BSTNode* pRoot)
 {
 	if (pRoot == NULL)
 		return INT_MAX;
@@ -307,7 +307,7 @@ int main()
 {
 	int a[] = { 10,6,18,4,8,14,25,3,5,7,9,12,16,23,27,40,29,52 };
 	int na = sizeof(a) / sizeof(int);
-	BSTNODE* tree = NULL;
+	BSTNode* tree = NULL;
 	// nếu duyệt thứ tự đúng như mong đợi: Hàm Insert và hàm CreateTree đúng
 	tree = createTree(a, na);
 	/*
@@ -407,9 +407,9 @@ int main()
 	//is BST: cây tree
 	cout << "tree is BST: " << isBST(tree) << endl;
 	// is BST: cây ctree
-	BSTNODE* temp1 = createNode(10);
-	BSTNODE* temp2 = createNode(15);
-	BSTNODE *ctree= new BSTNODE;
+	BSTNode* temp1 = createNode(10);
+	BSTNode* temp2 = createNode(15);
+	BSTNode *ctree= new BSTNode;
 	ctree->key = 5;
 	ctree->pLeft = temp1;
 	ctree->pRight = temp2;
@@ -430,7 +430,7 @@ int main()
 
 	*/
 	int b[] = { 10,6,18,4,8,14,25,3,5,7,9,12,16,23,27 };
-	BSTNODE* full = createTree(b, sizeof(b) / sizeof(int));
+	BSTNode* full = createTree(b, sizeof(b) / sizeof(int));
 	cout << "Is full BST: " << isFullBST(full) << endl;
 	//Isn't Full BST
 	cout << "Is full BST: " << isFullBST(tree) << endl;
